@@ -1,0 +1,29 @@
+<h1>Busca tu lugar favorito de Cerveza</h1>
+
+<form 
+action="/user/search"
+method="post">
+    <label for="">
+        Nombre del lugar
+        <input type="text" name="nombre">
+    </label>
+    <label for="">
+        Calle
+        <input type="text" name='calle'>
+    </label>
+    <label for="">
+        Colonia
+        <input type="text" name="colonia">
+    </label>
+    <label for="">
+        Código Postal
+        <input type="text" name = 'cp'>
+    </label>
+
+    <button 
+      class="btn waves-effect waves-light" 
+      type="submit" 
+      name="action">Search
+        <i class="material-icons right">&#x21b3;</i>
+      </button>
+</form>
