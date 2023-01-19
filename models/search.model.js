@@ -25,10 +25,14 @@ const userSchema = new Schema(
       uppercase:true
     },
    cp:{
-      type: Integer, 
+      type: String, 
       required:false, 
       minÑength: 6
     },
+    comentario:{
+      type:String,
+      require:true
+    }
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

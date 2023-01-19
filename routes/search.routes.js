@@ -1,8 +1,12 @@
-const router = require('express').Router()
+const express = require("express");
+const router = express.Router();
 
-router.get("/search",(req,res,next)=>{
-    res.render("search/index")
+//const search = require("../models/search.model");
 
-})
+router.get('/',(req, res) => {
+    res.render("search/info");
+});
 
-module.exports = router
+
+
+  module.exports = router;
