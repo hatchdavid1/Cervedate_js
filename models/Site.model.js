@@ -1,17 +1,20 @@
 const { Schema, model } = require("mongoose");
 
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
-const reviewSchema = new Schema(
+const siteSchema = new Schema(
   {
-    title: {
+    name: {
       type: String,
       required: true,
     },
-    coment: {
+    address: {
       type: String,
       required: true,
     },
-    
+    site:{
+        type: String,
+        required: true,
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -19,6 +22,6 @@ const reviewSchema = new Schema(
   }
 );
 
-const Review = model("review", reviewSchema);
+const Site = model("site", siteSchema);
 
-module.exports = Review;
+module.exports = Site;

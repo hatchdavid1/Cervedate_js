@@ -30,6 +30,9 @@ app.use("/", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
+const siteRoutes = require("./routes/site.routes");
+app.use("/site", siteRoutes);
+
 const reviewRoutes = require("./routes/review.routes");
 app.use("/reviews", reviewRoutes);
 
