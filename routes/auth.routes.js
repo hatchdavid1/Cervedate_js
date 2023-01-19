@@ -14,7 +14,6 @@ const User = require("../models/User.model");
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
-const { application } = require("express");
 
 // GET /auth/signup
 router.get("/signup", isLoggedOut, (req, res) => {
@@ -23,7 +22,7 @@ router.get("/signup", isLoggedOut, (req, res) => {
 
 // POST /auth/signup
 router.post("/signup", isLoggedOut, (req, res) => {
-  const { role, username, email, password } = req.body;
+  const { username, email, password } = req.body;
 
   // Check that username, email, and password are provided
   if (username === "" || email === "" || password === "") {
@@ -142,17 +141,6 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     .catch((err) => next(err));
 });
 
-// GET /auth/logout
-router.get("/logout", isLoggedIn, (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      res.status(500).render("auth/logout", { errorMessage: err.message });
-      return;
-    }
-
-    res.redirect("/");
-  });
-});
 
 
 module.exports = router;
