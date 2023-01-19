@@ -23,4 +23,4 @@ const reviewSchema = new Schema(
 
 const Review = model("review", reviewSchema);
 
-module.exports = site;
+module.exports = Review;
