@@ -1,12 +1,32 @@
 const express = require("express");
 const router = express.Router();
 
-//const search = require("../models/search.model");
+const Search = require('../models/search.model')
 
 router.get('/',(req, res) => {
-    res.render("search/info");
+    Search.find()
+    .then(lugares =>{
+        res.render("search/info", {lugares}) 
+    })
+    .catch(error=>next(error))
+    
 });
 
+router.post('/', (req, res, next)=>{
+    
+    Search.create(req.body)
+    .then((lugarCreado)=>{
+        res.redirect('/search/comment')
+    })
+    .catch(next => next(error))
+})
 
+router.get('/:id/detail', (req, res, next)=>{
+    Search.findById(req.params.id)
+    .then(lugares=>{
+        res.render('search/comment', {lugares})
+    })
+    .catch(error =>next(error))
+})
 
   module.exports = router;
