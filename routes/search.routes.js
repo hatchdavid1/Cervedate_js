@@ -16,7 +16,7 @@ router.post('/', (req, res, next)=>{
     
     Search.create(req.body)
     .then((lugarCreado)=>{
-        res.redirect('/search/comment')
+        res.redirect('search/comment')
     })
     .catch(next => next(error))
 })
