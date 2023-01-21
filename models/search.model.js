@@ -30,7 +30,7 @@ const searchSchema = new Schema(
       minÑength: 6
     },
     comentario:{
-      type:String,
+      type:[String],
       require:true
     }
   },

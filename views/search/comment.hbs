@@ -1,11 +1,14 @@
-<h1>Comenta sobre tu lugar favorito de Cerveza</h1>
+<h1>Comenta sobre tu lugar favorito de Cerveza {{site.nombre}}</h1>
+
 
 <ul>
-  <li>Prueba</li>
+  {{#each site.comentario}}
+  <li>{{this}}</li>
+  {{/each}}
 </ul>
 
 <form 
-action="/search/comment"
+action="/search/{{site._id}}/comment"
 method="post">
     <label for="">
         Comentario
