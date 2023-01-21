@@ -12,11 +12,22 @@ router.get('/',(req, res) => {
     
 });
 
-router.post('/', (req, res, next)=>{
+
+router.get('/:id/comment',(req, res) => {
+    
+    Search.findById(req.params.id)
+    .then(lugares=>{
+        res.render('search/comment', {site:lugares})
+    })
+    .catch(error =>next(error))
+    
+});
+
+router.post('/info', (req, res, next)=>{
     
     Search.create(req.body)
     .then((lugarCreado)=>{
-        res.redirect('search/comment')
+        res.redirect(`/search/${lugarCreado._id}/comment`)
     })
     .catch(next => next(error))
 })
@@ -28,5 +39,15 @@ router.get('/:id/detail', (req, res, next)=>{
     })
     .catch(error =>next(error))
 })
+
+router.post('/:id/comment',(req, res) => {
+    
+    Search.findByIdAndUpdate(req.params.id, {$push:{comentario:req.body.comentario}})
+    .then(lugares=>{
+        res.redirect(`/search/${req.params.id}/comment`)
+    })
+    .catch(error =>next(error))
+    
+});
 
   module.exports = router;
