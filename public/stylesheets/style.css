@@ -1,6 +1,8 @@
 body {
+  
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: medium;
 }
 
 a {
@@ -9,4 +11,9 @@ a {
 
 h1 {
   color: 15px;
+}
+
+.signup{
+  background-image: url('https://www.semana.com/resizer/3DM41AQXkz19Z5XjWj_Bunslvxo=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/IWJVUOOM75CFHCZJOXA7GJKDVE.jpg');
+  background-repeat: no-repeat;
 }

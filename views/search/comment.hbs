@@ -1,0 +1,26 @@
+<div class="hoja-comentarios">
+  <h1>Comenta sobre tu lugar favorito de Cerveza {{site.nombre}}</h1>
+
+
+<ul>
+  {{#each site.comentario}}
+  <li>{{this}}</li>
+  {{/each}}
+</ul>
+
+<form 
+action="/search/{{site._id}}/comment"
+method="post">
+    <label for="">
+        Comentario
+        <input type="text" name = 'comentario'>
+    </label>
+
+    <button 
+      class="btn waves-effect waves-light" 
+      type="submit" 
+      name="action">Add Comment 
+        <i class="material-icons right">&#x21b3;</i>
+      </button>
+</form>
+</div>
