@@ -1,62 +1,19 @@
 body {
-  margin: 0px;
-  padding: 0px;
+  
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: medium;
-  font-family: 'Lobster', cursive;
-  font-family: 'Roboto', sans-serif;
 }
 
 a {
-  color: #995d0f;
+  color: #00b7ff;
 }
 
 h1 {
-  font-family: 'Lobster', cursive;
-  text-align: center;
-  color: #3a2203;
-  color: 10px;
-}
-
-p { 
-  font-family: 'Lobster', cursive;
-  text-align: center;
-  color: #3a2203; 
-}
-
-.btn {
-  text-align: center;
-}
-.inicio{
-  background-image: url('https://mvsnoticias.com/u/fotografias/m/2022/8/5/f960x540-491439_565514_15.jpg');
-  background-size: cover;
-  height: 100vh;
+  color: 15px;
 }
 
 .signup{
   background-image: url('https://www.semana.com/resizer/3DM41AQXkz19Z5XjWj_Bunslvxo=/1280x720/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/IWJVUOOM75CFHCZJOXA7GJKDVE.jpg');
-  background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
 }
-
-.hoja-comentarios{
-
-  background-image: url('https://cdn.forbes.com.mx/2018/08/cerveza-640x360.jpg') ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-.login-form{
-  background-image: url('https://www.mexicodesconocido.com.mx/wp-content/uploads/2017/02/cervefest-festival-de-cervezas-xochimilco.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-
-.sites{
-  background-image: url('https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2016/04/23/160423014611_promo_cerveza_alemana_buena_640x360_getty_nocredit.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-
