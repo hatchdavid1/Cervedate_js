@@ -74,6 +74,7 @@ router.get("/login", isLoggedOut, (req, res) => {
 // POST /auth/login
 router.post("/login", isLoggedOut, (req, res, next) => {
   const {  email, password } = req.body;
+  console.log(req.body);
 
   // Check that username, email, and password are provided
   if ( email === "" || password === "") {
@@ -96,6 +97,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
   // Search the database for a user with the email submitted in the form
   User.findOne({ email })
     .then((user) => {
+      console.log(user);
       // If the user isn't found, send an error message that user provided wrong credentials
       if (!user) {
         res
